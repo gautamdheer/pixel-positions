@@ -56,9 +56,4 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Contact
 
-- Website: [pixelpos.com](https://pixelpos.com)
-- Email: [contact@pixelpos.com](mailto:contact@pixelpos.com)
-- Twitter: [@pixelpos](https://twitter.com/pixelpos)
-- LinkedIn: [Pixel Positions](https://www.linkedin.com/company/pixel-positions)
