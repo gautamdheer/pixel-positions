@@ -1,4 +1,4 @@
-@props(['size' => 'base'])
+@props(['tag'=>null,'size' => 'base'])
 
 @php
     $classes = 'bg-white/10 hover:bg-white/25 transition-color duration-300 rounded-xl';
@@ -14,4 +14,8 @@
 
 
 
-<a class="{{ $classes }}" href="#">{{ $slot }}</a>
+@if($tag && isset($tag->name))
+    <a class="{{ $classes }}" href="/tags/{{strtolower($tag->name)}}">{{ $tag->name }}</a>
+@else
+    <span class="{{ $classes }}">No tag available</span>
+@endif

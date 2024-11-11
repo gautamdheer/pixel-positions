@@ -14,9 +14,12 @@ class JobController extends Controller
      */
     public function index()
     {
-        return view("jobs.index", [
-            "job"=> Job::all(),
-            "tags"=> Tag::all(),
+        $jobs = Job::all()->groupBy('featured');
+
+        return view('jobs.index', [
+            'featuredJobs' => $jobs[0],
+            'jobs' => $jobs[1],
+            'tags' => Tag::all(),
         ]);
     }
 
