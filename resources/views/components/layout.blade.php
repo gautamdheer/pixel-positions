@@ -12,21 +12,35 @@
 
 </head>
 
-<body class="bg-black text-white font-hanken-grotesk">
+<body class="bg-black text-white font-hanken-grotesk pb-20">
     <div class="px-10">
         <nav class="flex justify-between item-center py-4 border-b border-white/10">
             <div>
                 <a href="/"><img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Pixel Positions"></a>
-             </div>
+            </div>
             <div class="space-x-6 font-bold">
                 <a href="/">Jobs</a>
                 <a href="#">Careers</a>
                 <a href="#">Salary</a>
                 <a href="#">Companies</a>
             </div>
+            @auth
             <div>
-                <a href="">Post a Job</a>
+                <a href="/jobs/create">Post a Job</a>
             </div>
+            @endauth
+
+            @guest
+            <div class="space-x-6 font-bold">
+
+                <a href="/register">Sign Up</a>
+                <a href="/login">Login</a>
+
+            </div>
+
+
+
+            @endguest
 
         </nav>
         <main class="mt-10 max-w-[968px] mx-auto">

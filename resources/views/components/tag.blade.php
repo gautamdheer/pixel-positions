@@ -9,10 +9,7 @@
     if ($size == 'small') {
         $classes .= ' px-3 py-1 text-2xs';
     }
-
 @endphp
-
-
 
 @if($tag && isset($tag->name))
     <a class="{{ $classes }}" href="/tags/{{strtolower($tag->name)}}">{{ $tag->name }}</a>
