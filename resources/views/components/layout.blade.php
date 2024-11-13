@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pixel Positions</title>
-    @vite(['resources/css/app.css','resources/js/app.js'])
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..700;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..700;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -25,22 +27,28 @@
                 <a href="#">Companies</a>
             </div>
             @auth
-            <div class="space-x-6">
-                <a href="/jobs/create">Post a Job</a> 
-                <a href="">{{auth()->user()->name}}</a>
-            </div>
-            
+                <div class="space-x-6">
+                    <a href="/jobs/create">Post a Job</a>
+                    <a href="">{{ auth()->user()->name }}</a>
+                    <form action="/logout" action="POST">
+                        <div class="space-x-6 font-bold">
+                            <a href="">Logout</a>
+                        </div>
+                    </form>
+                </div>
+
             @endauth
 
             @guest
-            <div class="space-x-6 font-bold">
-                <a href="/register">Sign Up</a>
-                <a href="/login">Login</a>
-            </div>
+                <div class="space-x-6 font-bold">
+                    <a href="/register">Sign Up</a>
+                    <a href="/login">Login</a>
+                </div>
             @endguest
         </nav>
         <main class="mt-10 max-w-[968px] mx-auto">
             {{ $slot }}
+
         </main>
     </div>
 </body>
