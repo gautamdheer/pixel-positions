@@ -21,20 +21,19 @@ class SessionController extends Controller
      */
     public function create()
     {
-         return view('auth.login');
+        return view('auth.login');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store()
-    {   
+    {
         //validation check
         $attributes = request()->validate([
             'email' => ['required', 'email'],
             'password' => ['required']
         ]);
-
         if (! Auth::attempt($attributes)) {
             throw ValidationException::withMessages([
                 'email' => 'Sorry, those credentials do not match.'
@@ -42,10 +41,9 @@ class SessionController extends Controller
         }
 
         request()->session()->regenerate();
-
         return redirect('/');
     }
- 
+
     /**
      * Display the specified resource.
      */
