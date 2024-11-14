@@ -27,13 +27,14 @@
                 <a href="#">Companies</a>
             </div>
             @auth
-                <div class="space-x-6">
+                <div class="space-x-6 flex">
                     <a href="/jobs/create">Post a Job</a>
                     <a href="">{{ auth()->user()->name }}</a>
+
                     <form action="/logout" action="POST">
-                        <div class="space-x-6 font-bold">
-                            <a href="">Logout</a>
-                        </div>
+                        @csrf
+                        @method('DELETE')
+                       <button>Logout</button>
                     </form>
                 </div>
 
