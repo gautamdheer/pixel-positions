@@ -1,7 +1,7 @@
 <x-layout>
     <x-page-heading>New Job</x-page-heading>
 
-    <x-forms.form action="/jobs/" method="POST">
+    <x-forms.form action="/jobs/create" method="POST">
 
         <x-forms.input label="Title" name="title" placeholder="CEO" />
 
