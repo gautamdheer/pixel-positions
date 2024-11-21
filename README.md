@@ -9,7 +9,6 @@ Pixel Positions is a specialized job board focused on connecting talented profes
 ## Features
 
 - **Job Listings:** Browse through curated gaming industry positions
-- **Company Profiles:** Learn about top gaming studios and publishers
 - **Advanced Search:** Filter by role, location, experience level, and more
 - **Application Tracking:** Monitor your job application status
 - **Profile Management:** Showcase your portfolio and experience
@@ -18,9 +17,8 @@ Pixel Positions is a specialized job board focused on connecting talented profes
 
 ### For Job Seekers
 1. Create an account
-2. Complete your profile
-3. Upload your resume/portfolio
-4. Browse and apply for positions
+2. Upload your resume/portfolio
+3. Browse and apply for positions
 
 ### For Employers
 1. Register your company
